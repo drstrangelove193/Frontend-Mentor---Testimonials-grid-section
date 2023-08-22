@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+:root {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+
+.cards-container {
+  min-height: 100svh;
+  padding: 5.45rem 1.85rem;
+  background: #ECF2F8;
+
+  display: grid;
+  gap: 24px;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+}
+
+
+.card:nth-child(1) {
+  grid-area: one;
+}
+
+.card:nth-child(2) {
+  grid-area: two;
+}
+
+.card:nth-child(3) {
+  grid-area: three;
+}
+
+.card:nth-child(4) {
+  grid-area: four;
+}
+
+.card:nth-child(5) {
+  grid-area: five;
+}
+
+
+@media (min-width: 64rem) {
+  .cards-container {
+    grid-template-areas:
+      'one one'
+      'two four'
+      'three four'
+      'five five';
+  }
+}
+
+
+@media (min-width: 90rem) {
+
+  .cards-container {
+    padding: 12.62rem 12.7rem;
+    column-gap: 30px;
+    grid-template-areas:
+      'one one two five'
+      'three four four five';
+  }
+
+  .daniel-card .experience {
+    margin-right: 0 !important;
+  }
+
+  .quote {
+    right: 80px !important;
+  }
+
+  .janette-card,
+  .patrick-card,
+  .kira-card {
+    padding: 2rem 2.46rem !important;
+  }
+
+  .daniel-card .description,
+  .janette-card .description {
+    margin-bottom: 1.23rem !important;
+  }
+
+  .janette-card .description,
+  .patrick-card .description,
+  .kira-card .description {
+    margin-bottom: 1.85rem !important;
+  }
+
+}
+
+.card {
+  padding: 2rem 2.46rem 2.46rem 2.46rem;
+  border-radius: 8px;
+  box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+}
+
+.daniel-card {
+  position: relative;
+  background: #733FC8;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.31rem;
+}
+
+
+.image-container {
+  border-radius: 28px;
+  width: 28px;
+  height: 28px;
+}
+
+.daniel-image {
+  border: 2px solid #A775F1;
+  background: url(./images/image-daniel.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.name {
+  font-size: 1rem;
+  color: #FFF;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+.role {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.85rem;
+  margin-top: 0.31rem;
+}
+
+
+.description {
+  position: relative;
+  margin-top: 1.38rem;
+  margin-bottom: 1.23rem;
+  color: #FFF;
+  font-size: 1.53rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.daniel-card .description {
+  margin-bottom: 3.07rem;
+}
+
+.experience {
+  max-width: 100%;
+  color: rgba(207, 207, 207, 0.7);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.38rem;
+}
+
+.daniel-card .experience {
+  margin-right: 1.23rem;
+}
+
+.quote {
+  fill: #A775F1;
+  position: absolute;
+  top: 0;
+  right: 1.85rem;
+  display: inline-block;
+  width: 104px;
+  height: 102px;
+  background: url(./images/quotes.svg);
+}
+
+
+
+/* ###############################################
+
+            Second Card
+
+################################################## */
+
+.jonathan-card {
+  background: #48556A;
+}
+
+.jonathan-card .image-container {
+  background: url(./images/image-jonathan.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* ###############################################
+
+            Third Card
+
+################################################## */
+
+
+.janette-card {
+  background: #FFF;
+}
+
+.janette-card .image-container {
+  background: url(./images/image-jeanette.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.janette-card .name,
+.janette-card .description {
+  color: #48556A;
+}
+
+.janette-card .role {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.janette-card .experience {
+  color: rgba(72, 85, 106, 0.7);
+}
+
+
+
+
+/* ###############################################
+
+            Fourth Card
+
+################################################## */
+
+.patrick-card {
+  background: #19202D;
+}
+
+.patrick-card .image-container {
+  border: 2px solid #733FC8;
+  background: url(./images/image-patrick.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* ###############################################
+
+            Fifth Card
+
+################################################## */
+
+.kira-card {
+  background: #FFF;
+}
+
+.kira-card .image-container {
+  background: url(./images/image-kira.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.kira-card .name,
+.kira-card .description {
+  color: #48556A;
+}
+
+.kira-card .role {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.kira-card .experience {
+  color: rgba(72, 85, 106, 0.7);
+}
